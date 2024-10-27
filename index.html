@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .summary { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Order Management System</h1>
+
+    <label for="product">Select a product:</label>
+    <select id="product">
+        <option value="10">Product A - $10</option>
+        <option value="15">Product B - $15</option>
+        <option value="20">Product C - $20</option>
+    </select>
+
+    <label for="quantity">Enter quantity:</label>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <p>Total Price: <span id="totalPrice">$10</span></p>
+
+    <button id="orderButton">Place Order</button> 
+
+    <div class="summary" id="orderSummary"></div>
+
+    <script src="main.js"></script> 
+</body>
+</html>
