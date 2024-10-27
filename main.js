@@ -83,3 +83,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// Task 4: Handle Order Submission
+// Event listener for placing the order
+orderButton.addEventListener('click', function() {
+    const quantity = parseInt(quantityInput.value);
+
+    // Check if the quantity is valid before submitting
+    if (quantity > 0) {
+        const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
+        const totalPrice = totalPriceDisplay.textContent;
+
+        // Display order summary
+        orderSummary.innerHTML = `<strong>Order Summary:</strong><br>
+                                   Product: ${selectedProduct}<br>
+                                   Quantity: ${quantity}<br>
+                                   Total Price: ${totalPrice}`;
+    } else {
+        errorMessage.textContent = "Please enter a valid quantity before placing the order.";
+    }
+});
